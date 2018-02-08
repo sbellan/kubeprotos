@@ -97,6 +97,7 @@ spec:
             value: "rabbitmq"
           - name: RABBITMQ_ERLANG_COOKIE
             value: "mycookie" 
+      # TODO Add Volume for the Data directory
       volumes:
         - name: config-volume
           configMap:
