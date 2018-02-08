@@ -64,7 +64,6 @@ spec:
             valueFrom:
               fieldRef:
                 fieldPath: status.podIP
-        # vera - nodetool seems to slow under kubernetes
         readinessProbe:
           exec:
             command:
