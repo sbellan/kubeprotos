@@ -1,0 +1,19 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+  name: test
+  annotations:
+    ingress.kubernetes.io/rewrite-target: /
+spec:
+  rules:
+  - host: kc.local
+    http:
+      paths:
+      - path: /foo
+        backend:
+          serviceName: frontend
+          servicePort: 80
+      - path: /bar
+        backend:
+          serviceName: hello
+          servicePort: 80
